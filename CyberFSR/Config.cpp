@@ -44,19 +44,6 @@ void Config::Reload()
 	}
 
 	auto exeName = Util::ExePath().filename();
-
-	if (exeName == "Cyberpunk2077.exe")
-	{
-		Method = Method.value_or(ViewMethod::Cyberpunk2077);
-	}
-	else if (exeName == "DyingLightGame_x64_rwdi.exe")
-	{
-		SharpnessRange = SharpnessRange.value_or(SharpnessRangeModifier::Extended);
-	}
-	else if (exeName == "RDR2.exe")
-	{
-		Method = Method.value_or(ViewMethod::RDR2);
-	}
 }
 
 std::optional<std::string> Config::readString(std::string section, std::string key, bool lowercase)
@@ -137,14 +124,6 @@ std::optional<ViewMethod> Config::readViewMethod(std::string section, std::strin
 	if (value == "config")
 	{
 		return ViewMethod::Config;
-	}
-	else if (value == "cyberpunk2077")
-	{
-		return ViewMethod::Cyberpunk2077;
-	}
-	else if (value == "rdr2")
-	{
-		return ViewMethod::RDR2;
 	}
 
 	return std::nullopt;
