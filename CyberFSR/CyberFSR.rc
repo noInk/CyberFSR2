@@ -13,11 +13,10 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// English (United Kingdom) resources
+// Neutral (Default) resources
 
-#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
-LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
-#pragma code_page(1252)
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -47,12 +46,25 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 //
+// RCDATA
+//
+ID_LICENSE_CYBR        RCDATA                  "..\\LICENSE.txt"
+
+ID_LICENSE_FSR2        RCDATA                  "..\\external\\FidelityFX-FSR2\\LICENSE.txt"
+
+ID_LICENSE_DLSS        RCDATA                  "..\\external\\nvngx_dlss_sdk\\LICENSE.txt"
+
+ID_LICENSE_INI         RCDATA                  "..\\external\\simpleini\\LICENCE.txt"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
 // Version
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,0,3
- PRODUCTVERSION 1,0,0,3
+ FILEVERSION 1,0,0,305
+ PRODUCTVERSION 1,0,0,305
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -65,25 +77,25 @@ VS_VERSION_INFO VERSIONINFO
 BEGIN
     BLOCK "StringFileInfo"
     BEGIN
-        BLOCK "080904b0"
+        BLOCK "040004b0"
         BEGIN
-            VALUE "CompanyName", "DLSS2FSR"
-            VALUE "FileDescription", "Drop-in DLSS replacement with FSR 2.1"
-            VALUE "FileVersion", "1.0.0.3"
+            VALUE "CompanyName", "CyberFSR"
+            VALUE "FileDescription", "FSR2 drop-in for DLSS2 UNOFFICIAL"
+            VALUE "FileVersion", "1.0.0.305"
             VALUE "InternalName", "DLSS2FSR.dll"
             VALUE "LegalCopyright", "Copyright (C) 2022 PotatoOfDoom"
             VALUE "OriginalFilename", "DLSS2FSR.dll"
             VALUE "ProductName", "DLSS2FSR"
-            VALUE "ProductVersion", "1.0.0.3"
+            VALUE "ProductVersion", "1.0.0.305"
         END
     END
     BLOCK "VarFileInfo"
     BEGIN
-        VALUE "Translation", 0x809, 1200
+        VALUE "Translation", 0x400, 1200
     END
 END
 
-#endif    // English (United Kingdom) resources
+#endif    // Neutral (Default) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

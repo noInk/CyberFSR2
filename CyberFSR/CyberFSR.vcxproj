@@ -198,8 +198,14 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CyberFSR.rc">
-      <Culture Condition="'$(Configuration)|$(Platform)'=='Release|x64'">0x0809</Culture>
+      <Culture Condition="'$(Configuration)|$(Platform)'=='Release|x64'">0x0409,1200</Culture>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\LICENSE.txt" />
+    <Text Include="..\external\FidelityFX-FSR2\LICENSE.txt" />
+    <Text Include="..\external\nvngx_dlss_sdk\LICENSE.txt" />
+    <Text Include="..\external\simpleini\LICENCE.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

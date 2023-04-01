@@ -168,7 +168,7 @@ void NvParameter::Set_Internal(const char* InName, unsigned long long InValue, N
 	case Util::NvParameter::DLSS_Input_Bias_Current_Color_Mask:
 		InputBiasCurrentColorMask = inValuePtr;
 		if (InputBiasCurrentColorMask && ParameterType == NvParameterType::NvD3D12Resource)
-			((ID3D12Resource*)InputBiasCurrentColorMask)->SetName(L"Color");
+			((ID3D12Resource*)InputBiasCurrentColorMask)->SetName(L"InputBiasColorMask");
 		break;
 	case Util::NvParameter::Color:
 		Color = inValuePtr;
@@ -265,7 +265,7 @@ NVSDK_NGX_Result NvParameter::Get_Internal(const char* InName, unsigned long lon
 		*outValuePtr = NVSDK_NGX_DLSS_GetStatsCallback;
 		break;
 	case Util::NvParameter::SizeInBytes:
-		*outValueULL = 0x1337; //Dummy value
+		*outValueULL = NULL; //Dummy value
 		break;
 	case Util::NvParameter::OptLevel:
 		*outValueInt = 0; //Dummy value

@@ -10,8 +10,6 @@ enum class SharpnessRangeModifier
 enum class ViewMethod
 {
 	Config,
-	Cyberpunk2077,
-	RDR2,
 };
 
 class Config
